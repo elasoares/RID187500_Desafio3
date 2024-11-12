@@ -1,3 +1,19 @@
+const renderTaskProgressData = (tasks) => {
+    let tasksProgress = document.getElementById('tasks-progress');
+
+    if (!tasksProgress) {
+        tasksProgress = document.createElement('div');
+        tasksProgress.id = 'tasks-progress';
+        document.getElementById('todo-footer').appendChild(tasksProgress);
+    }
+
+
+    const doneTasks = tasks.filter(({ checado }) => checado).length;
+    const totalTasks = tasks.length;
+
+    tasksProgress.textContent = `${doneTasks}/${totalTasks} concluídas`;
+}
+
 
 const getTasksFromLocalStorage = () => {
     const localTasks = JSON.parse(window.localStorage.getItem('tasks'));
@@ -15,7 +31,7 @@ const removerDoneTask = () => {
     const tasksToRemove = tarefas.filter(({checado}) => checado).map(({id}) => id);
     const updatedTasks = tarefas.filter(({checado}) => !checado);
     setTaskInLocalStorage(updatedTasks);
-    
+    renderTaskProgressData(updatedTasks);
     tasksToRemove.forEach((taskId) => {
         const taskElement = document.getElementById(taskId);
         if (taskElement) {
@@ -29,6 +45,7 @@ const removeTask = (taskId) => {
     const tarefas = getTasksFromLocalStorage();
     const updatedTasks = tarefas.filter(({id}) => parseInt(id) !== parseInt(taskId));
     setTaskInLocalStorage(updatedTasks);
+    renderTaskProgressData(updatedTasks);
     const taskElement = document.getElementById(taskId);
     if (taskElement) {
         document.getElementById("todo-list").removeChild(taskElement);
@@ -61,6 +78,7 @@ const onCheckboxClick = (event) => {
             : tarefa;
     });
     setTaskInLocalStorage(updatedTasks);
+    renderTaskProgressData(updatedTasks);
 }
 
 
@@ -111,6 +129,7 @@ const createTask = (evento) => {
     setTaskInLocalStorage(updatedTasks);
 
     evento.target.reset();  
+    renderTaskProgressData(updatedTasks);
 }
 
 
@@ -123,4 +142,5 @@ window.onload = function() {
         const checkbox = getCheckBoxInput(tarefa);
         createTaskListItem(tarefa, checkbox);
     });
+    renderTaskProgressData(tarefas)
 }
