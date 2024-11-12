@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+    <link rel="stylesheet" href="style.css">
+<body>
+    <main>
+        <h1>To-do</h1>
+        <section id="create-todo-section">
+            <form id="create-todo-form">
+                <input
+                type="text" 
+                id="descricao"
+                name="descricao"
+                placeholder="Qual a tarefa deseja cadastrar?"
+                aria-label="Qual a tarefa deseja cadastrar?"
+                class="input-descricao"
+                />
+                <button type="submit" aria-label="Cadastrar tarefa" class="add-tarefa-btn">+</button>
+            </form>
+        </section>
+        <section class="todo-list-section">
+            <ul id="todo-list">
+
+            </ul>
+        </section>
+        <footer>
+            <button onclick="removerDoneTask()" class="remove-done-task-btn">
+                Remover tarefas concluídas
+            </button>
+        </footer>
+    </main>    
+    <script src="js.js"></script>
+</body>
+</html>
