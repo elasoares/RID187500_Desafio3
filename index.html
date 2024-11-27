@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="style.css">
 <body>
     <main>
-        <h1>To-do</h1>
+        <header>
+            <h1>To-do</h1>
+        </header>
         <section id="create-todo-section">
-            <form id="create-todo-form">
+            <h2 id="create-todo-title">Criar nova tarefa</h2>
+            <form id="create-todo-form">                          
                 <input
                 type="text" 
                 id="descricao"
@@ -22,12 +25,12 @@
             </form>
         </section>
         <section class="todo-list-section">
+            <h2 id="todo-list-title">Lista de tarefas</h2>
             <ul id="todo-list">
-
             </ul>
         </section>
         <footer id="todo-footer">
-            <button onclick="removerDoneTask()" class="remove-done-task-btn">
+            <button onclick="removerDoneTask()" class="remove-done-task-btn" aria-label="Remover tarefas concluídas">
                 Remover tarefas concluídas
             </button>
         </footer>
