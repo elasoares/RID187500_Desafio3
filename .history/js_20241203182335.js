@@ -10,10 +10,8 @@ const createTaskListItem = (tarefa) => {
     taskDetails.className = 'task-details';
     taskDetails.innerHTML = `
         <span class="task-text ${tarefa.checado ? 'completed-text' : ''}">${tarefa.descricao}</span>
-        <div class="container-task-label">
         <span class="task-label">${tarefa.etiqueta}</span>
         <span class="task-date">Criado em: ${tarefa.data}</span>
-        </div>
 
     `;
 
@@ -76,7 +74,7 @@ const renderTaskProgressData = (tasks) => {
     const doneTasks = tasks.filter(({ checado }) => checado).length;
     const totalTasks = tasks.length;
 
-    tasksProgress.textContent = `${doneTasks} tarefa(s) concluída(s)`;
+    tasksProgress.textContent = `${doneTasks} tarefa(s) concluída(s) de ${totalTasks}`;
     document.getElementById('todo-footer').appendChild(tasksProgress);
 };
 

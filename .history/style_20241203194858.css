@@ -130,7 +130,7 @@ main {
 }
 input{
     width: 85%;
-    height: 15px;
+    height: Fixed (50px)px;
     padding: 16px 24px 16px 24px;
     gap: 10px;
     border-radius: 8px;
@@ -138,16 +138,21 @@ input{
     color: #B1BACB;
 }
 
+input:focus {
+    border: 1px solid #5eb7f6;
+}
+
+
 
 .container-btn{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 98%;
+    width: 100%;
 }
 
 .add-tarefa-btn {
-    width: 98%;
+    width: 85%;
     height: 4rem;
     color: #fff;
     background-color: #2D70FD;
@@ -167,7 +172,7 @@ input{
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
 .task-text{
@@ -208,13 +213,6 @@ input{
     justify-content: center;
 }
 
-.container-task-label{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    gap: 5px;
-}
 .task-label {
     width: 67px;
     height: 21px;
@@ -296,28 +294,5 @@ input{
         border-radius: 8px;
         border: 1px solid #EEEEEE
     }
-
-    .todo-list-section ul li{
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .task-details{
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        flex-direction: column;
-        gap: 10px;
-    }
-    .container-task-label{
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        flex-direction: row;
-        gap: 10px;
-    }
-
-    
 
 }

@@ -162,13 +162,13 @@ input{
 }
 
 
-.task-details{
+/* .task-details{
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    gap: 10px;
-}
+    gap: 5px;
+} */
 
 .task-text{
     font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';

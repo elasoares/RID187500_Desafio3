@@ -8,31 +8,37 @@
 <body>
     <main>
         <header>
-            <h1>To-do</h1>
+            <h1>Board de tarefas</h1>
         </header>
         <section id="create-todo-section">
-            <h2 id="create-todo-title">Criar nova tarefa</h2>
             <form id="create-todo-form">                          
                 <input
-                type="text" 
+                type="text"
                 id="descricao"
                 name="descricao"
-                placeholder="Qual a tarefa deseja cadastrar?"
-                aria-label="Qual a tarefa deseja cadastrar?"
-                class="input-descricao"
-                />
+                placeholder="Nome da tarefa"
+                aria-label="Nome da tarefa"
+                class="input-nome-tarefa"
+            />
+            <input
+                type="text"
+                id="etiqueta"
+                name="etiqueta"
+                placeholder="Etiqueta"
+                aria-label="Etiqueta"
+                class="input-etiqueta"
+            />
+            <div class="container-btn">
                 <button type="submit" aria-label="Cadastrar tarefa" class="add-tarefa-btn">+</button>
+            </div>
             </form>
         </section>
         <section class="todo-list-section">
-            <h2 id="todo-list-title">Lista de tarefas</h2>
             <ul id="todo-list">
             </ul>
         </section>
         <footer id="todo-footer">
-            <button onclick="removerDoneTask()" class="remove-done-task-btn" aria-label="Remover tarefas concluídas">
-                Remover tarefas concluídas
-            </button>
+         
         </footer>
     </main>    
     <script src="js.js"></script>

@@ -129,25 +129,30 @@ main {
     gap: 16px;
 }
 input{
-    width: 85%;
-    height: 15px;
+    width: Fill (311px)px;
+    height: Fixed (50px)px;
     padding: 16px 24px 16px 24px;
     gap: 10px;
     border-radius: 8px;
-    border: 1px solid #EEEEEE;
-    color: #B1BACB;
+    border: 1px solid #EEEEEE
+
 }
+
+input:focus {
+    border: 1px solid #5eb7f6;
+}
+
 
 
 .container-btn{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 98%;
+    width: 100%;
 }
 
 .add-tarefa-btn {
-    width: 98%;
+    width: 100%;
     height: 4rem;
     color: #fff;
     background-color: #2D70FD;
@@ -167,7 +172,7 @@ input{
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
 .task-text{
@@ -208,13 +213,6 @@ input{
     justify-content: center;
 }
 
-.container-task-label{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    gap: 5px;
-}
 .task-label {
     width: 67px;
     height: 21px;
@@ -242,12 +240,10 @@ input{
     justify-content: flex-end;
     font-size: 1.6rem;
     align-items: flex-end;
-    height: 20px;
+    height: 50px;
     font-size: 1.4rem;
     color: #B1BACB;
-    border-top:1px solid #EEEEEE;
-    margin-top: 10px;
-    padding: 20px;
+    border-top:1px solid #EEEEEE
 }
 
 @media (min-width: 768px) {
@@ -256,11 +252,26 @@ input{
         padding: 2.4rem 1.6rem;
     }
 
+    h1 {
+        color: #da5c3e;
+    }
 
     .todo-list-section ul li {
         font-size: 1.5rem;
     }
 
+    .add-tarefa-btn {
+        width: 5rem;
+        height: 3.5rem;
+    }
+
+    #nome-tarefa {
+        font-size: 1.5rem;
+    }
+    .remove-done-task-btn {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+    }
 }
 
 @media (min-width: 980px) {
@@ -270,54 +281,11 @@ input{
     }
     h1 {
         font-size: 3.5rem;
+        color: #5eb7f6;
     }
 
-    #create-todo-section{
-        align-items: center;
+    .remove-done-task-btn {
+        font-size: 1.8rem;
+        padding: 0 1rem;
     }
-    #create-todo-form{
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 80%;
-    }
-    .container-btn{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 20%;
-    }
-
-    input{
-        width: 50%;
-        height: 1rem;
-        padding: 16px 24px 16px 24px;
-        gap: 10px;
-        border-radius: 8px;
-        border: 1px solid #EEEEEE
-    }
-
-    .todo-list-section ul li{
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .task-details{
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        flex-direction: column;
-        gap: 10px;
-    }
-    .container-task-label{
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        flex-direction: row;
-        gap: 10px;
-    }
-
-    
-
 }

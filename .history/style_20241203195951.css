@@ -166,8 +166,8 @@ input{
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    gap: 5px;
 }
 
 .task-text{
