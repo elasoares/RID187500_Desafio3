@@ -6,41 +6,42 @@
     <title>To-Do</title>
     <link rel="stylesheet" href="style.css">
 <body>
-    <main>
+    <div class="container">
         <header>
             <h1>Board de tarefas</h1>
         </header>
-        <section id="create-todo-section">
-            <form id="create-todo-form">                          
-                <input
-                type="text"
-                id="descricao"
-                name="descricao"
-                placeholder="Nome da tarefa"
-                aria-label="Nome da tarefa"
-                class="input-nome-tarefa"
-            />
-            <input
-                type="text"
-                id="etiqueta"
-                name="etiqueta"
-                placeholder="Etiqueta"
-                aria-label="Etiqueta"
-                class="input-etiqueta"
-            />
-            <div class="container-btn">
-                <button type="submit" aria-label="Cadastrar tarefa" class="add-tarefa-btn">+</button>
-            </div>
-            </form>
-        </section>
-        <section class="todo-list-section">
-            <ul id="todo-list">
-            </ul>
-        </section>
-        <footer id="todo-footer">
-         
+        <main>
+            <section id="create-todo-section">
+                <form id="create-todo-form">                          
+                    <input
+                    type="text"
+                    id="descricao"
+                    name="descricao"
+                    placeholder="Nome da tarefa"
+                    aria-label="Nome da tarefa"
+                    class="input-nome-tarefa"
+                    />
+                    <input
+                        type="text"
+                        id="etiqueta"
+                        name="etiqueta"
+                        placeholder="Etiqueta"
+                        aria-label="Etiqueta"
+                        class="input-etiqueta"
+                    />
+                    <div class="container-btn">
+                        <button type="submit" aria-label="Cadastrar tarefa" class="add-tarefa-btn">+</button>
+                    </div>
+                </form>
+            </section>
+            <section class="todo-list-section">
+                <ul id="todo-list">
+                </ul>
+            </section>
+        </main>
+        <footer id="todo-footer" aria-live="polite">
         </footer>
-    </main>    
+    </div>    
     <script src="js.js"></script>
 </body>
 </html>

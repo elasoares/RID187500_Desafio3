@@ -1,15 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Yusei+Magic&display=swap');
 html {
     width: 100%;
     height: auto;
-    
     box-sizing: border-box;
-    font-size: 10px; 
-    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    font-size: 62.5%;
+    font-family: "Yusei Magic", serif;
+    font-weight: 400;
+    font-style: normal;
+
 }
 
 body {
     width: 100%;
-    height: 100vh;
+    height: auto;
     margin: 0;
     padding: 0;
     display: flex;
@@ -19,21 +22,24 @@ body {
 
 header{
     width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
     h1 {
-    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
-    font-size: 32px;
+    font-family: "Yusei Magic", serif;
+    font-size: 3.2rem;
     font-weight: 600;
     line-height: 37.92px;
     letter-spacing: 0.01em;
-    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #000; 
 }
 
-main {
+.container {
     width: 100%; 
     height: auto;
     max-width: 42rem;
@@ -45,7 +51,12 @@ main {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    
+    margin: 50px 0;
+}
+
+main{
+    width: 100%; 
+    height: auto;
 }
 
 
@@ -57,12 +68,12 @@ main {
     width: 100%;
     height: auto;
     gap: 8px;
+    overflow: hidden;
 }
 
 .todo-list-section ul {
     padding-inline-start: 0;
     height: 20rem;
-    overflow: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -74,10 +85,10 @@ main {
 
 .todo-list-section ul li {
     width: 80%;
-    height: 120px;
-    padding: 24px 32px 24px 32px;
-    margin-top: 5px;
-    border-radius: 16px;
+    height: 12rem;
+    padding: 2.4rem 3.2rem;
+    margin-top: 1.5rem;
+    border-radius: 1.6rem;
     border: 1px solid #EEEEEE;
     list-style: none;
     display: flex;
@@ -97,16 +108,18 @@ main {
     background: #2D70FD;
     width: 121px;
     height:44px;
+    line-height: 14px;
     padding: 12px 24px 12px 24px;
     gap: 8px;
     border-radius: 4px;
     border: 1px solid #2D70FD;
     color: #fff;
-    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    font-family: "Yusei Magic", serif;
     font-size: 18px;
     font-weight: 500;
     text-align: center;
     align-self: center;
+    cursor: pointer;
 }
 
 
@@ -117,23 +130,25 @@ main {
     height: 150px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
 }
 
 #create-todo-form {
     font-size: 1.6rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     width: 100%;
     gap: 16px;
 }
 input{
-    width: 85%;
+    width: 80%;
     height: 15px;
-    padding: 16px 24px 16px 24px;
+    padding: 1.6rem 2.4rem; 
     gap: 10px;
-    border-radius: 8px;
+    border-radius: 0.8rem;
     border: 1px solid #EEEEEE;
     color: #B1BACB;
 }
@@ -143,18 +158,21 @@ input{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 98%;
+    width: 100%;
+    height: auto;
 }
 
 .add-tarefa-btn {
-    width: 98%;
+    width: 92%;
     height: 4rem;
+    line-height: 4rem;
     color: #fff;
     background-color: #2D70FD;
     border-radius: 4px;
     font-size: 2.4rem;
     cursor: pointer;
     border: none;
+    text-align: center;
 }
 
 .add-tarefa-btn:hover {
@@ -171,7 +189,7 @@ input{
 }
 
 .task-text{
-    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    font-family: "Yusei Magic", serif;
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 17.6px;
@@ -183,8 +201,8 @@ input{
 
 .todo-item.completed .task-text {
     text-decoration: line-through;
-    color: #bbbbbb;
-    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    color: #999;
+    font-family: "Yusei Magic", serif;
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 17.6px;
@@ -195,8 +213,8 @@ input{
 
 }
 
-.todo-item.completed .task-completed-icon {
-    font-size: 1.6rem;
+.task-completed-icon {
+    font-size: 1.5em;
     color: #fff;
     align-self: center;
     width: 32px;
@@ -216,17 +234,17 @@ input{
     gap: 5px;
 }
 .task-label {
-    width: 67px;
-    height: 21px;
-    border-radius: 16px;
-    border: 1px 0px 0px 0px;
+    width: auto;
+    height: auto;
+    font-size: 1.5rem;
+    color: #b2bec3;
     background: #FFFFFF;
-    font-size: 1.2rem;
     border: 1px solid #b2bec3;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #b2bec3;
+    padding: 0 10px;
 }
 
 .task-date {
@@ -251,8 +269,8 @@ input{
 }
 
 @media (min-width: 768px) {
-    main {
-        max-width: 50rem;
+    .container {
+        max-width: 70rem;
         padding: 2.4rem 1.6rem;
     }
 
@@ -260,11 +278,13 @@ input{
     .todo-list-section ul li {
         font-size: 1.5rem;
     }
-
+    .add-tarefa-btn {
+        width: 87%;
+    } 
 }
 
 @media (min-width: 980px) {
-    main {
+    .container {
         max-width: 80rem;
         padding: 2.4rem 1.6rem;
     }
@@ -272,6 +292,12 @@ input{
         font-size: 3.5rem;
     }
 
+    #descricao{
+        width: 90%;
+    }
+    #etiqueta{
+        width: 90%;
+    }
     #create-todo-section{
         align-items: center;
     }
@@ -279,7 +305,8 @@ input{
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        width: 80%;
+        width: 85%;
+        gap: 5px;
     }
     .container-btn{
         display: flex;
@@ -320,4 +347,13 @@ input{
 
     
 
+}
+@media (min-width: 1440px) {
+    .container {
+        max-width: 90rem; 
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
 }
