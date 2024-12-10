@@ -26,7 +26,7 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
 }
 
     h1 {
@@ -43,7 +43,7 @@ body {
 .container {
     width: 100%; 
     height: auto;
-    max-width: 42rem;
+    max-width: 40rem;
     background-color: #fff;
     border-radius: 0.8rem;
     padding: 3rem 2.4rem;
@@ -70,6 +70,7 @@ main{
     height: auto;
     gap: 8px;
     overflow: hidden;
+    margin: 50px 0 0 0;
 }
 
 .todo-list-section ul {
@@ -88,7 +89,6 @@ main{
     width: 80%;
     height: 12rem;
     padding: 2.4rem 3.2rem;
-    margin-top: 1.5rem;
     border-radius: 1.6rem;
     border: 1px solid #EEEEEE;
     list-style: none;
@@ -150,8 +150,8 @@ input{
     padding: 1.6rem 2.4rem; 
     gap: 10px;
     border-radius: 0.8rem;
-    border: 1px solid #EEEEEE;
-    color: #B1BACB;
+    border: 1px solid #bdbdbd;
+    color: #414141;
 }
 
 
@@ -271,7 +271,7 @@ input{
 
 @media (min-width: 768px) {
     .container {
-        max-width: 50rem;
+        max-width: 45rem;
         padding: 2.4rem 1.6rem;
     }
 
@@ -280,8 +280,8 @@ input{
         font-size: 1.5rem;
     }
     .add-tarefa-btn {
-        width: 87%;
-        height: 3rem;
+        width: 90%;
+        height: 3.9rem;
         line-height: 3rem;
     } 
 }
@@ -318,13 +318,11 @@ input{
         width: 20%;
     }
 
+
     input{
         width: 50%;
-        height: 1rem;
+        height: 2rem;
         padding: 16px 24px 16px 24px;
-        gap: 10px;
-        border-radius: 8px;
-        border: 1px solid #EEEEEE
     }
 
     .todo-list-section ul li{
