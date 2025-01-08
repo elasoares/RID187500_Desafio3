@@ -76,7 +76,7 @@ const renderTaskProgressData = (tasks) => {
     const doneTasks = tasks.filter(({ checado }) => checado).length;
     const totalTasks = tasks.length;
 
-    tasksProgress.textContent = `${doneTasks} de ${totalTasks} tarefa concluída`;
+    tasksProgress.textContent = `${doneTasks} tarefa concluída`;
 };
 
 const createTask = (event) => {
