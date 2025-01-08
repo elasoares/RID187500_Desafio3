@@ -22,16 +22,16 @@ body {
 
 .container-header{
     width: 100%;
-    height: 100px;
+    height: auto;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
     h1 {
     font-family: "Rubik", serif;
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 600;
     line-height: 37.92px;
     letter-spacing: 0.01rem;
@@ -41,9 +41,9 @@ body {
 }
 
 .container {
-    width: 100%; 
+    width: 80%; 
     height: auto;
-    max-width: 35rem;
+    max-width: 40rem;
     background-color: #fff;
     border-radius: 0.8rem;
     padding: 3rem 2.4rem;
@@ -52,10 +52,10 @@ body {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    margin: 50px 0;
+    margin: 15px 0;
 }
 
-main{
+#container-main{
     width: 100%; 
     height: auto;
 }
@@ -86,7 +86,7 @@ main{
 }
 
 .todo-list-section ul li {
-    width: 80%;
+    width: 70%;
     height: 12rem;
     padding: 2.4rem 3.2rem;
     border-radius: 1.6rem;
@@ -117,7 +117,6 @@ main{
     color: #fff;
     font-family: "Rubik", serif;
     font-size: 18px;
-    font-weight: 500;
     text-align: center;
     align-self: center;
     cursor: pointer;
@@ -150,7 +149,7 @@ input{
     padding: 1.6rem 2.4rem; 
     gap: 10px;
     border-radius: 0.8rem;
-    border: 1px solid #bdbdbd;
+    border: 1px solid #EEEEEE;
     color: #414141;
 }
 
@@ -164,7 +163,7 @@ input{
 }
 
 .add-tarefa-btn {
-    width: 92%;
+    width: 93%;
     height: 4rem;
     line-height: 4rem;
     color: #fff;
@@ -197,12 +196,11 @@ input{
     letter-spacing: 0.01em;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-
 }
 
 .todo-item.completed .task-text {
     text-decoration: line-through;
-    color: #999;
+    color: #001747;
     font-family: "Rubik", serif;
     font-size: 1.5rem;
     font-weight: 500;
@@ -215,11 +213,11 @@ input{
 }
 
 .task-completed-icon {
-    font-size: 1.5em;
+    font-size: 1em;
     color: #fff;
     align-self: center;
-    width: 38px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     border-radius: 32px;
     background: #00D8A7;
     display: flex;
@@ -238,9 +236,9 @@ input{
     width: auto;
     height: auto;
     font-size: 1.5rem;
-    color: #b2bec3;
+    color: #B1BACB;
     background: #FFFFFF;
-    border: 1px solid #b2bec3;
+    border: 1px solid #B1BACB;
     border-radius: 16px;
     display: flex;
     align-items: center;
@@ -250,7 +248,7 @@ input{
 
 .task-date {
     font-size: 1.2rem;
-    color: #b2bec3;
+    color: #B1BACB;
     margin-top: 0.4rem;
 }
 
@@ -344,11 +342,6 @@ input{
         justify-content: center;
         flex-direction: row;
         gap: 10px;
-    }
-    .task-completed-icon {
-        width: 38px;
-        height: 40px;
-        padding: 4px ;
     }
 }
 @media (min-width: 1440px) {
