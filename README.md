@@ -19,5 +19,5 @@ Este é um projeto de um **Gerenciador de Tarefas** simples, desenvolvido como p
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/elasoares/RID187500_Desafio3.git
 2. ## 🌐 [Visite o Gerenciador de Tarefas aqui!](https://elasoares.github.io/RID187500_Desafio3/)
