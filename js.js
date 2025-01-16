@@ -1,9 +1,48 @@
+const createTaskFixed = (tarefa) => {
+    const lista = document.getElementById("todo-list");
+
+    const toDo = document.createElement("li");
+    toDo.className = `todo-item ${tarefa.checado ? "completed" : ""}`;
+    toDo.id = tarefa.id;
+
+    const taskFixed = document.createElement("span");
+    taskFixed.className = "task-details";
+    taskFixed.innerHTML = `   
+    <span class="task-text ${tarefa.checado ? "completed-text" : ""}">${tarefa.descricao}</span>
+        <div class="container-task-label">
+            <span class="task-label">${tarefa.etiqueta}</span>
+            <span class="task-date">Criado em: ${tarefa.data}</span>
+        </div>
+    `;
+
+    if (!tarefa.checado) {
+        const completeButton = document.createElement("button");
+        completeButton.textContent = "Concluir";
+        completeButton.className = "complete-task-btn";
+        completeButton.onclick = () => markTaskAsCompleted(tarefa.id);
+
+        toDo.appendChild(taskFixed);
+        toDo.appendChild(completeButton);
+    } else {
+        const completedIcon = document.createElement("span");
+        completedIcon.textContent = "✔";
+        completedIcon.className = "task-completed-icon";
+
+        toDo.appendChild(taskFixed);
+        toDo.appendChild(completedIcon);
+    }
+
+    lista.insertBefore(toDo, lista.firstChild);
+}
+
+
 const createTaskListItem = (tarefa) => {
     const lista = document.getElementById("todo-list");
 
     const toDo = document.createElement("li");
     toDo.className = `todo-item ${tarefa.checado ? "completed" : ""}`;
     toDo.id = tarefa.id;
+
 
     const taskDetails = document.createElement("span");
     taskDetails.className = "task-details";
@@ -29,6 +68,7 @@ const createTaskListItem = (tarefa) => {
         completedIcon.className = "task-completed-icon";
 
         toDo.appendChild(taskDetails);
+
         toDo.appendChild(completedIcon);
     }
 
@@ -101,6 +141,7 @@ const createTask = (event) => {
     setTasksInLocalStorage(updatedTasks);
 
     createTaskListItem(newTask);
+    createTaskFixed(newTask);
     event.target.reset();
     renderTaskProgressData(updatedTasks);
 };
@@ -111,5 +152,30 @@ window.onload = () => {
 
     const tarefas = getTasksFromLocalStorage();
     tarefas.forEach((tarefa) => createTaskListItem(tarefa));
+
+    const tarefaFixed = [
+    {   
+        id: 'fixed-task1', 
+        descricao: 'Implementar tela de listagem de tarefas', 
+        etiqueta: 'frontend', 
+        data: '21/08/2024', 
+        checado: false
+    },
+    {
+        id: 'fixed-task2', 
+        descricao: 'Criar endpoint para cadastro de tarefas', 
+        etiqueta: 'backend', 
+        data: '21/08/2024', 
+        checado: false
+    },
+    {
+        id: 'fixed-task3', 
+        descricao: 'Implementar protótipo da listagem de tarefas', 
+        etiqueta: 'UX', 
+        data: '21/08/2024', 
+        checado: true
+    }
+    ];
+    tarefaFixed.forEach((tarefa)=> createTaskFixed(tarefa));
     renderTaskProgressData(tarefas);
 };
