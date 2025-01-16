@@ -20,4 +20,4 @@ Este é um projeto de um **Gerenciador de Tarefas** simples, desenvolvido como p
 1. Clone este repositório:
    ```bash
    git clone https://github.com/seu-usuario/seu-repositorio.git
-2. ## 🌐 [Visite o ToDo  aqui!](https://elasoares.github.io/Todo/)
+2. ## 🌐 [Visite o Gerenciador de Tarefas aqui!](https://elasoares.github.io/RID187500_Desafio3/)
