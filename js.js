@@ -151,29 +151,28 @@ window.onload = () => {
 
  
     const tarefaFixed = [
-    {
-        id: 'fixed-task3', 
-        descricao: 'Implementar protótipo da listagem de tarefas', 
-        etiqueta: 'UX', 
-        data: '21/08/2024', 
-        checado: true
-    },
-
-    {
-        id: 'fixed-task2', 
-        descricao: 'Criar endpoint para cadastro de tarefas', 
-        etiqueta: 'backend', 
-        data: '21/08/2024', 
-        checado: false
-    },
-    
-    {   
-        id: 'fixed-task1', 
-        descricao: 'Implementar tela de listagem de tarefas', 
-        etiqueta: 'frontend', 
-        data: '21/08/2024', 
-        checado: false
-    }
+        
+        {   
+            id: 'fixed-task1', 
+            descricao: 'Implementar tela de listagem de tarefas', 
+            etiqueta: 'frontend', 
+            data: '21/08/2024', 
+            checado: false
+        },
+        {
+            id: 'fixed-task2', 
+            descricao: 'Criar endpoint para cadastro de tarefas', 
+            etiqueta: 'backend', 
+            data: '21/08/2024', 
+            checado: false
+        },
+        {
+            id: 'fixed-task3', 
+            descricao: 'Implementar protótipo da listagem de tarefas', 
+            etiqueta: 'UX', 
+            data: '21/08/2024', 
+            checado: true
+        }
     ];
 
     const tarefas = getTasksFromLocalStorage();
