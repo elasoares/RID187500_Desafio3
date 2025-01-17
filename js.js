@@ -1,4 +1,4 @@
-const createTaskFixed = (tarefa) => {
+/* const createTaskFixed = (tarefa) => {
     const lista = document.getElementById("todo-list");
 
     const toDo = document.createElement("li");
@@ -33,7 +33,7 @@ const createTaskFixed = (tarefa) => {
     }
 
     lista.insertBefore(toDo, lista.firstChild);
-}
+} */
 
 
 const createTaskListItem = (tarefa) => {
@@ -114,7 +114,7 @@ const renderTaskProgressData = (tasks) => {
     }
 
     const doneTasks = tasks.filter(({ checado }) => checado).length;
-    const totalTasks = tasks.length;
+    //const totalTasks = tasks.length;
 
     tasksProgress.textContent = `${doneTasks} tarefa concluída`;
 };
@@ -141,7 +141,6 @@ const createTask = (event) => {
     setTasksInLocalStorage(updatedTasks);
 
     createTaskListItem(newTask);
-    createTaskFixed(newTask);
     event.target.reset();
     renderTaskProgressData(updatedTasks);
 };
@@ -150,17 +149,16 @@ window.onload = () => {
     const form = document.getElementById("create-todo-form");
     form.addEventListener("submit", createTask);
 
-    const tarefas = getTasksFromLocalStorage();
-    tarefas.forEach((tarefa) => createTaskListItem(tarefa));
-
+ 
     const tarefaFixed = [
-    {   
-        id: 'fixed-task1', 
-        descricao: 'Implementar tela de listagem de tarefas', 
-        etiqueta: 'frontend', 
+    {
+        id: 'fixed-task3', 
+        descricao: 'Implementar protótipo da listagem de tarefas', 
+        etiqueta: 'UX', 
         data: '21/08/2024', 
-        checado: false
+        checado: true
     },
+
     {
         id: 'fixed-task2', 
         descricao: 'Criar endpoint para cadastro de tarefas', 
@@ -168,14 +166,26 @@ window.onload = () => {
         data: '21/08/2024', 
         checado: false
     },
-    {
-        id: 'fixed-task3', 
-        descricao: 'Implementar protótipo da listagem de tarefas', 
-        etiqueta: 'UX', 
+    
+    {   
+        id: 'fixed-task1', 
+        descricao: 'Implementar tela de listagem de tarefas', 
+        etiqueta: 'frontend', 
         data: '21/08/2024', 
-        checado: true
+        checado: false
     }
     ];
-    tarefaFixed.forEach((tarefa)=> createTaskFixed(tarefa));
-    renderTaskProgressData(tarefas);
+
+    const tarefas = getTasksFromLocalStorage();
+
+    const allTasks = [
+        ...tarefaFixed.filter(
+            fixedTask => !tarefas.some(task => task.id === fixedTask.id)
+        ),
+        ...tarefas
+    ];
+
+    setTasksInLocalStorage(allTasks);
+    allTasks.forEach((tarefa) => createTaskListItem(tarefa));
+    renderTaskProgressData(allTasks);
 };
